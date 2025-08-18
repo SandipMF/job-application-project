@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_BASE_URL = "/api"; //"http://localhost:8081";
+const API_BASE_URL = import.meta.env.VITE_API_URL; //"/api"; //"http://localhost:8081";
 
 export const login = (email: string, password: string) =>
   axios.post(
