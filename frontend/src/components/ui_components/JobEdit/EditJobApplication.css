@@ -1,0 +1,60 @@
+.edit-form {
+  /* display: flex; */
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.edit-form-section {
+  border: 1px solid black;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 20px;
+}
+.edit-application-form {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* background-color: #282c34; */
+  margin-top: 10px;
+}
+.edit-application-form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.edit-form h3 {
+  text-align: center;
+}
+
+.edit-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.updateBtn {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  color: green;
+  font-weight: bold;
+  font-size: small;
+}
+
+.cancelBtn {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  background-color: darkred;
+}

@@ -1,0 +1,45 @@
+.form-section {
+  /* width: 30%; */
+  border: 1px solid black;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  height: 380px;
+  width: 350px;
+}
+
+.form-section h3 {
+  text-align: center;
+}
+
+.application-form {
+  width: 100%;
+  padding: 20px;
+  /* border: 1px solid #ccc;
+  border-radius: 8px; */
+  /* background-color: #282c34; */
+}
+
+.application-form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+textarea {
+  width: 145px;
+}
+.application-form .div-footer-button-container {
+  justify-content: center;
+  /* background-color: #000; */
+  align-items: center;
+  padding-top: 20px;
+}
+.submitBtn {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  color: green;
+  font-weight: bold;
+  font-size: small;
+}

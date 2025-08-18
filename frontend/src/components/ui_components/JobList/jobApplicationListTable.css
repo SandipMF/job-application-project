@@ -1,0 +1,70 @@
+.application-list-section {
+  flex: 1;
+  /* background-color: #282c34; */
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.application-list-section h3 {
+  text-align: center;
+  /* background-color: #282c34; */
+  padding: 10px;
+}
+.application-list-section div {
+  justify-content: center;
+  /* align-items: center; */
+  /* background-color: #282c34; */
+  display: flex;
+}
+.application-list-section div div {
+  justify-content: center;
+  display: flex;
+}
+
+.application-list-table {
+  border: 1px solid #ccc;
+  justify-content: center;
+  border-collapse: collapse;
+  margin: 10px;
+  width: 100%;
+}
+.application-list-table thead tr th {
+  border-right: 1px solid #ccc;
+  padding: 2px;
+}
+.application-list-table thead tr th:last-child {
+  border-right: none;
+}
+
+.application-list-table tr {
+  border-top: 1px solid #ccc;
+}
+
+.application-list-table tr td {
+  border-right: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.editBtn {
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  color: black;
+  margin: 5px;
+}
+
+.deleteBtn {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  background-color: darkred;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .application-list-section {
+    margin: 10px;
+  }
+}
