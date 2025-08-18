@@ -16,6 +16,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:8081",
 ];
+
 app.use(
   cors({
     origin: allowedOrigins,
@@ -25,6 +26,8 @@ app.use(
 app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+app.use("/", router());
 
 const server = http.createServer(app);
 const PORT = process.env.PORT;
@@ -39,5 +42,3 @@ mongoose.connect(MONGO_URI);
 mongoose.connection.on("error", (error: Error) => {
   console.log("mongoose error:=>", error);
 });
-
-app.use("/", router());
