@@ -29,9 +29,25 @@ services:
       - ./backend/src:/usr/src/app/src # hot reload source code
       - /usr/src/app/node_modules # prevent overwriting node_modules
     command: npm run dev
+    depends_on:
+      - mongo
+    networks:
+      - mern
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo-job-application
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db
     networks:
       - mern
 
 networks:
   mern:
     driver: bridge
+
+volumes:
+  mongo_data: {}

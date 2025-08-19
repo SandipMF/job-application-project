@@ -35,7 +35,7 @@ server.listen(PORT, () => {
   console.log(`server is running on http://localhost:${PORT}`);
 });
 
-const MONGO_URI = process.env.MONGO_URI!;
+const MONGO_URI = process.env.MONGO_URI_DEV!;
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URI);
 
