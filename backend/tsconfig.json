@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "baseUrl": "src",
-    "outDir": "dist",
+    "target": "es2020",
+    "module": "commonjs",
     "sourceMap": true,
-    "noImplicitAny": true
+    // "strict": true,
+    "outDir": "dist/",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "composite": true,
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["typings/*", "node_modules"],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  }
 }

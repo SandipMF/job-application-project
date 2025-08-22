@@ -1,7 +1,21 @@
-FROM node:20.17.0
-WORKDIR /app
+# Stage 1: Build
+FROM node:20.17.0 as builder
+WORKDIR /usr/src/app
+
 COPY package*.json ./
-RUN npm install
+RUN npm ci   # install all deps including devDeps
 COPY . .
-EXPOSE 8081
-CMD ["npm", "start"]
+RUN npm run build   # compiles TS -> dist/
+
+# Stage 2: Runtime
+FROM node:20.17.0
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm ci --only=production   # install only prod deps
+COPY --from=builder /usr/src/app/dist ./dist
+
+RUN npm install -g pm2
+
+EXPOSE 3000
+CMD ["pm2-runtime", "npm", "--", "start"]

@@ -3,7 +3,7 @@ import type { JobApplication } from "../models";
 import { appState } from "../state";
 import { storeDataInLocalStorage } from "../storage";
 
-const API_BASE_URL = "/api"; //"http://localhost:8081";
+const API_BASE_URL = import.meta.env.VITE_API_URL; //"/api"; //"http://localhost:8081";
 // note: context
 export const getAllJobApplications = () =>
   axios
